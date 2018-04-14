@@ -1,17 +1,19 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+        <div id="app">
+              <router-view/>
+        </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+     console.log("%cMade with 💜 by Jonnzer", "color: #FFFFFF; font-size: 20px; padding: 20px 20px 30px 20px; font-fmaily: sans-serif; text-shadow: 1px 1px #7FF7AD, 2px 2px #357FE7, 3px 3px #542EE9, 4px 4px #D32DAF");
+  }
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,4 +22,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
 </style>
