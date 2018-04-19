@@ -2,7 +2,7 @@
   <div class="origin">
      <div id="type-js" ></div>
      <div id="particles-js">
-         <div class="arrowDiv">
+         <div class="arrowDiv" >
            <i class="arrowHead">&#xe639;</i>
           </div>
      </div>
@@ -153,10 +153,10 @@ export default {
       "background_repeat": "no-repeat",
       "background_size": "cover"
     }
-  }
-
+  },
 );
-   }
+},
+
 
   },
 };
@@ -164,66 +164,36 @@ export default {
 
 <style >
 .origin{
-  height: 80%;
-  overflow-y: hidden;
-}
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-body, html {
-  padding: 0;
-  margin:  0;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  
 }
 
-.character {
-  color: white;
-  font-size: 68px;
-  position: absolute;
-  left:0;
-  top: 0;
-  bottom: 0;
-  right:0;
-  text-align: center;
-  line-height: .475;
-  font-family: Oswald, monospace;
-}
 #type-js{ /*打印机效果*/
   color:#fd79a8;
   font-size: 21px;
   margin-top: 30px;
   font-weight: 700;
 }
-#particles-js{
+#particles-js{ /*粒子效果*/
   height: 100%;
 }
-
+.arrowDiv{
+   position: absolute;
+  bottom:10px;
+  right: 9%;
+  animation: arrowMoveR 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
 .arrowHead{
   font-family: 'arrowHead'!important;
   font-size: 32px;
   color: #fd79a8;
  
 }
-.arrowDiv{
-   position: absolute;
-  bottom:10px;
-  right: 9%;
-}
+
 @font-face { /*箭头的字体图标样式*/ 
   font-family: 'arrowHead';  /* project id 635518 */
   src: url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.eot');
@@ -233,4 +203,14 @@ body, html {
   url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.svg#iconfont') format('svg');
 }
 
+/*箭头动画*/
+@keyframes arrowMoveR{
+  0% {
+    right: 9%;
+  }
+  100% {
+    right: 3%;
+    transform: scale(1.5,1.5);
+  }
+}
 </style>
