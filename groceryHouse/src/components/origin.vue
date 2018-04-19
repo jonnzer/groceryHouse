@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="origin">
      <div id="type-js" ></div>
      <div id="particles-js"></div>
   </div>
@@ -30,6 +30,7 @@ export default {
         strings: ["life is too long ", "we should do something awesome!!!!"],
         typeSpeed: 80,
         loop: true,
+        showCursor: false,
       });      
   },
    initParticleJS(){
@@ -157,7 +158,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
+.origin{
+  overflow-y: hidden;
+  overflow: scroll;
+}
 h1,
 h2 {
   font-weight: normal;
@@ -195,7 +200,9 @@ body, html {
   font-family: Oswald, monospace;
 }
 #type-js{ /*打印机效果*/
-  color:rgb(231, 154, 154);
+  color:#fd79a8;
   font-size: 21px;
+  margin-top: 30px;
+  font-weight: 700;
 }
 </style>
