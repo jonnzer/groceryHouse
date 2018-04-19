@@ -1,7 +1,11 @@
 <template>
   <div class="origin">
      <div id="type-js" ></div>
-     <div id="particles-js"></div>
+     <div id="particles-js">
+         <div class="arrowDiv">
+           <i class="arrowHead">&#xe639;</i>
+          </div>
+     </div>
   </div>
 </template>
 
@@ -160,8 +164,8 @@ export default {
 
 <style >
 .origin{
+  height: 80%;
   overflow-y: hidden;
-  overflow: scroll;
 }
 h1,
 h2 {
@@ -205,4 +209,28 @@ body, html {
   margin-top: 30px;
   font-weight: 700;
 }
+#particles-js{
+  height: 100%;
+}
+
+.arrowHead{
+  font-family: 'arrowHead'!important;
+  font-size: 32px;
+  color: #fd79a8;
+ 
+}
+.arrowDiv{
+   position: absolute;
+  bottom:10px;
+  right: 9%;
+}
+@font-face { /*箭头的字体图标样式*/ 
+  font-family: 'arrowHead';  /* project id 635518 */
+  src: url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.eot');
+  src: url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.svg#iconfont') format('svg');
+}
+
 </style>
