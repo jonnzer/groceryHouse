@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+     <div id="type-js" ></div>
      <div id="particles-js"></div>
   </div>
 </template>
@@ -19,10 +20,18 @@ export default {
       this.$nextTick(() => {
             this.initParticleJS()
         })
+            this.initTypeJs()
+        
   },
   methods: {
- 
-
+  initTypeJs(){
+      var Typed = require('typed.js');
+      var typed = new Typed('#type-js', {
+        strings: ["life is too long ", "we should do something awesome!!!!"],
+        typeSpeed: 80,
+        loop: true,
+      });      
+  },
    initParticleJS(){
      particlesJS('particles-js',{
     "particles": {
@@ -184,5 +193,9 @@ body, html {
   text-align: center;
   line-height: .475;
   font-family: Oswald, monospace;
+}
+#type-js{ /*打印机效果*/
+  color:rgb(231, 154, 154);
+  font-size: 21px;
 }
 </style>
