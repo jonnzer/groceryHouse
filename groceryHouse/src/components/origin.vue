@@ -5,6 +5,9 @@
          <div class="arrowDiv" >
            <i class="arrowHead">&#xe639;</i>
           </div>
+          <div class="doorDiv">
+            <i class="arrowHead">&#xe60b;</i>
+          </div>
      </div>
   </div>
 </template>
@@ -180,12 +183,21 @@ export default {
   height: 100%;
 }
 .arrowDiv{
-   position: absolute;
-  bottom:10px;
-  right: 9%;
-  animation: arrowMoveR 2.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+    position: absolute;
+    bottom: 20px;
+    right: 15%;
+    animation: arrowMoveR 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+.doorDiv{
+     position: absolute;
+     bottom:20px;
+     right: 6%;
+     animation: doorScale 2.5s;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-out;
+
 }
 .arrowHead{
   font-family: 'arrowHead'!important;
@@ -194,23 +206,33 @@ export default {
  
 }
 
-@font-face { /*箭头的字体图标样式*/ 
+/*箭头的字体图标样式*/
+@font-face {
   font-family: 'arrowHead';  /* project id 635518 */
-  src: url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.eot');
-  src: url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_635518_rx2b7mxlvm42t9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_635518_ttu5kbzt2sa46lxr.eot');
+  src: url('//at.alicdn.com/t/font_635518_ttu5kbzt2sa46lxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_635518_ttu5kbzt2sa46lxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_635518_ttu5kbzt2sa46lxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_635518_ttu5kbzt2sa46lxr.svg#iconfont') format('svg');
 }
 
 /*箭头动画*/
 @keyframes arrowMoveR{
   0% {
-    right: 9%;
+    right: 15%;
   }
   100% {
-    right: 3%;
+    right: 12%;
     transform: scale(1.5,1.5);
+  }
+}
+/*门动画*/ 
+@keyframes doorScale {
+  0% {
+
+  }
+  100% {
+    transform: scale(2,2)
   }
 }
 </style>
