@@ -1,6 +1,6 @@
 <template>
     <div class="homePage">
-        homePage
+        homePage 1231231231
     </div>
 </template>
 <script>
