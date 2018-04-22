@@ -34,7 +34,7 @@ export default {
   initTypeJs(){
       var Typed = require('typed.js');
       var typed = new Typed('#type-js', {
-        strings: ["life is too long ", "we should do something awesome!!!!"],
+        strings: [ "I Just Wanna Do Something Awesome!!!!"],
         typeSpeed: 80,
         loop: true,
         showCursor: false,
