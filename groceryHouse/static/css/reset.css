@@ -1,7 +1,24 @@
+/*
+此css存在的目的： 重置浏览器的默认样式
+*/
+ul{
+  margin: 0px;
+  padding: 0px;
+}
 body{
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+ul{
+  list-style-type: none;
+}
+html{
+  font-size: 62.5%; /*10 ÷ 16 × 100% = 62.5% 16px作为基准单位 后续设置10px为1rem*/
+}
+i{
+  font-style: normal;/*去掉i默认的斜体*/
 }
