@@ -1,19 +1,19 @@
 <template>
     <div class="homePage">
-        <header class="hp_header">
-            <span class="myLogo">
-              <i class="lit_house">&#xe8ff;</i>
-                痴谷雨の杂货店
-            </span>
-            <ul class="allOption">
-              <li>MOIVE</li>
-              <li>MUSIC</li>
-              <li>COMIC</li>
-              <li>TOUR</li>
-              <li>GAME</li>
-            </ul>
-        </header>
-
+            <div class="allScreenPic"></div>
+            <header class="hp_header">
+                <span class="myLogo">
+                  <i class="lit_house">&#xe8ff;</i>
+                    痴谷雨の杂货店
+                </span>
+                <ul class="allOption">
+                  <li>MOIVE</li>
+                  <li>MUSIC</li>
+                  <li>COMIC</li>
+                  <li>TOUR</li>
+                  <li>GAME</li>
+                </ul>
+          </header>
     </div>
 </template>
 <script>
@@ -38,22 +38,42 @@ export default {
   .homePage{
     font-size: 1.6rem;
     position: absolute;
-    /*left: 0;*/
-    /*top: 0;*/
     width: 100%;
     height: 100%;
   }
+
+  /*allScreen background Pic*/
+  .homePage .allScreenPic{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/pic4.jpg') center center no-repeat;
+    background-size: cover;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 500ms linear;
+  }
+  .homePage .allScreenPic:hover{
+    transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+
+  }
+  /*头部 -- start*/
   .homePage .hp_header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-weight: bold;
     height: 5rem;
+    width: 100%;
     line-height: 5rem;
     /*border: 0.01rem solid palevioletred;*/
     color: #F2F2F2;
-    background: linear-gradient(to right, #ffe283, #ce94ff);
-
+    /*color: #000;*/
+    /*background: linear-gradient(to right, #ffe283, #ce94ff);*/
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
   }
   .homePage .lit_house{
     font-family: 'headerHouse';
@@ -77,5 +97,8 @@ export default {
   .homePage .allOption li:nth-child(5){
     margin-right: 2rem;
   }
+  /*头部 -- end*/
+  /*大图*/
+
 </style>
 
