@@ -14,6 +14,7 @@
                   <li>GAME</li>
                 </ul>
           </header>
+            <p class="oneWord">起风了,唯有努力生存。</p>
     </div>
 </template>
 <script>
@@ -98,7 +99,17 @@ export default {
     margin-right: 2rem;
   }
   /*头部 -- end*/
-  /*大图*/
-
+  /*一言 --start*/
+  .homePage .oneWord{
+    position: absolute;
+    /*text-align: center;*/
+    /*top:50%;*/
+    /*left:50%;*/
+    /*transform:translate(-50%,-50%);*/
+    left: 6rem;
+    bottom: 10%;
+    color: #F2F2F2;
+    font-weight: bold;
+  }
 </style>
 
