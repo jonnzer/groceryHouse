@@ -1,7 +1,7 @@
 /*
 此css存在的目的： 重置浏览器的默认样式
 */
-ul{
+ul,p{
   margin: 0px;
   padding: 0px;
 }
