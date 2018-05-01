@@ -14,17 +14,38 @@
                   <li>GAME</li>
                 </ul>
           </header>
-            <p class="oneWord">起风了,唯有努力生存。</p>
+            <p class="oneWord">
+              <span class="leftIcon"> 『 </span>{{oneWObj.hitokoto}}<span class="rightIcon">』</span>
+            </p>
+            <p class="fromWho">
+              <span> -「</span>{{oneWObj.from}}<span>」</span>
+            </p>
     </div>
 </template>
 <script>
-export default {
+  import { mapGetters,mapActions,mapMutations } from 'vuex'
+
+  export default {
     name: "homePage",
     data() {
         return {
 
         }
-    }
+    },
+  methods: {
+    ...mapActions([
+      'act_oneWord',
+    ])
+
+  },
+    created(){
+      this.act_oneWord()
+    },
+    computed: {
+      ...mapGetters([
+        'oneWObj',      // 一言对象
+      ])
+    },
 }
 </script>
 <style>
@@ -103,12 +124,26 @@ export default {
   /*一言 --start*/
   .homePage .oneWord{
     position: absolute;
-    /*text-align: center;*/
-    /*top:50%;*/
-    /*left:50%;*/
-    /*transform:translate(-50%,-50%);*/
     left: 6rem;
-    bottom: 10%;
+    bottom: 15%;
+    color: #F2F2F2;
+    font-weight: bold;
+  }
+  .homePage .oneWord .leftIcon{
+    position: relative;
+    left: 0px;
+    top: -1rem;
+  }
+
+  .homePage .oneWord .rightIcon{
+    position: relative;
+    right: 0px;
+    bottom:  -1rem;
+  }
+  .homePage .fromWho{
+    position: absolute;
+    left: 23rem;
+    bottom: 8%;
     color: #F2F2F2;
     font-weight: bold;
   }

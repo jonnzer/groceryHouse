@@ -1,1 +1,2 @@
-export const a = state => 1
+// 一言对象
+export const oneWObj = state => state.oneWord.oneWObj
