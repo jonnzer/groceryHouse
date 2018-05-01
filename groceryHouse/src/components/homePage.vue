@@ -41,11 +41,12 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
   /*allScreen background Pic*/
   .homePage .allScreenPic{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     background: url('../assets/pic4.jpg') center center no-repeat;
