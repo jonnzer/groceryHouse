@@ -10,6 +10,6 @@ const groceryHouse = new Sequelize(`mysql://${process.env.DB_USER}:${process.env
   }
 })
 
-module.exports = {
+export default {
   groceryHouse    //  导出为数据库的model
 }
