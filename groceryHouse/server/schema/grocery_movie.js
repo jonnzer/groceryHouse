@@ -1,7 +1,4 @@
-/* jshint indent:
-      sequelize-auto -o './schema' -d groceryHouse -h 127.0.0.1 -u root -p 3306 -x 123456 -e mysql;
-
-2 */
+/* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('grocery_movie', {
