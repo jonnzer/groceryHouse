@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS `grocery_movie` (
     `movie_id` INT(11) NOT NULL AUTO_INCREMENT,   -- 电影id
-    `movie_create_data` DATE(6) NOT NULL,     -- 创造时间
+    `movie_create_data` DATE(6) NOT NULL,         -- 创造时间
     `movie_name` CHAR(255) NOT NULL,              -- 电影名字
     `movie_actor` CHAR(255) NOT NULL,             -- 演员
     `movie_tag` CHAR(255) NOT NULL,               -- 标签
     `movie_sum` CHAR(255) NOT NULL,               -- 剧情简介
     `movie_high_pic` CHAR(255) NOT NULL,          -- 高清大图
     `movie_simple_pic` CHAR(255) NOT NULL,        -- 小图
-    `movie_content` CHAR(255) NOT NULL,                 -- 具体内容
+    `movie_content` CHAR(255) NOT NULL,           -- 具体内容
     `movie_seed` CHAR(255) NOT NULL,              -- 种子
     PRIMARY KEY (`movie_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET=utf8;
