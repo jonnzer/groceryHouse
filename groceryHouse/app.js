@@ -3,6 +3,8 @@ import './env'
 import Koa from 'koa'
 import koaRouter from 'koa-router'
 import movie_route from './server/routes/movie_route'
+import comic_route from './server/routes/comic_route'
+
 // import json from 'koa-json'
 // import koaBodyparser from 'koa-bodyparser'
 
@@ -26,6 +28,7 @@ app.on('error', function (err, ctx) {
 })
 
 router.use('/movie', movie_route.routes()) // 电影api
+router.use('/comic',comic_route.routes())  // 漫画api
 router.get('/caidan', function (ctx, next) {
 	ctx.body = 'Hello caidan!';
 });

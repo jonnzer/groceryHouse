@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
     movie_create_data: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false
     },
     movie_name: {
@@ -29,8 +29,9 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     movie_high_pic: {
-      type: DataTypes.CHAR(255),
-      allowNull: false
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      defaultValue: ''
     },
     movie_simple_pic: {
       type: DataTypes.CHAR(255),
