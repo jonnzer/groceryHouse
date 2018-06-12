@@ -1,3 +1,8 @@
+
+/*
+*一言api接口
+* */
+
 import axios from 'axios'
 export const reqOneWord = (obj,okCB,errCB) => {
   axios({

@@ -7,7 +7,7 @@
                     痴谷雨の杂货店
                 </span>
                 <ul class="allOption">
-                  <li>MOIVE</li>
+                  <li @click="jumpRoute('movie')">MOIVE</li>
                   <li>MUSIC</li>
                   <li>COMIC</li>
                   <li>TOUR</li>
@@ -35,7 +35,10 @@
   methods: {
     ...mapActions([
       'act_oneWord',
-    ])
+    ]),
+    jumpRoute(name){        //  跳转路由
+      this.$router.push({name: name})
+    }
 
   },
     created(){
