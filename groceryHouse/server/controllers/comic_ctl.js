@@ -9,6 +9,18 @@ const getNewComic = async function (ctx) {
     }
 }
 
+const getComicTag = async function (ctx) {
+  const result = await comicModel.comicTagModel()
+  console.log(result)
+  ctx.body = {
+      status: 200,
+      msg: 'success',
+      data: result
+  }
+
+}
+
 export default {
-  getNewComic
+  getNewComic,
+  getComicTag
 }

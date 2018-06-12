@@ -9,7 +9,7 @@ const groceryHouse = new Sequelize(`mysql://${process.env.DB_USER}:${process.env
   }
 })
 
-groceryHouse  
+groceryHouse
   .authenticate()
   .then(() => { // test connect 数据库 状态
     console.log('Connection has been established successfully.');
