@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "server": "node server_entry.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -18,7 +19,7 @@
     "mo-js": "^0.288.2",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
-    "particles.js": "^2.0.0", 
+    "particles.js": "^2.0.0",
     "sequelize": "^4.37.7",
     "sequelize-auto": "^0.4.29",
     "typed.js": "^2.0.6",
