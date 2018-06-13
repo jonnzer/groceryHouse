@@ -2,12 +2,12 @@
     <div class="homePage">
             <div class="allScreenPic"></div>
             <header class="hp_header">
-                <span class="myLogo">
+                <span class="myLogo" @click="jumpRoute('origin')">
                   <i class="lit_house">&#xe8ff;</i>
                     痴谷雨の杂货店
                 </span>
                 <ul class="allOption">
-                  <li @click="jumpRoute('movie')">MOIVE</li>
+                  <li @click="jumpRoute('movieList')">MOIVE</li>
                   <li>MUSIC</li>
                   <li>COMIC</li>
                   <li>TOUR</li>
@@ -37,7 +37,7 @@
       'act_oneWord',
     ]),
     jumpRoute(name){        //  跳转路由
-      this.$router.push({name: name})
+        this.$router.push({name: name})
     }
 
   },

@@ -5,7 +5,7 @@
 <script>
   import {mapActions} from 'vuex'
 	export default {
-		name: "movie",
+		name: "movieList",
     created(){
 		  this.act_latestMovie()
     },

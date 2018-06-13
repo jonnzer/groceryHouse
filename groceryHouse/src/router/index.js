@@ -4,7 +4,7 @@ import Router from 'vue-router'
 // 开始引入组件
 import origin from '@/components/origin'
 import homePage from '@/components/homePage'
-import movie from '@/components/movie'
+import movieList from '@/components/movieList'
 Vue.use(Router)
 
 export default new Router({
@@ -22,12 +22,13 @@ export default new Router({
     },
     {
       path: '/movieList',
-      name: 'movie',
-      component: movie
+      name: 'movieList',
+      component: movieList
     },
     {
-      path: '*',
-      redirect: '/', // 重定向
+      path: '/*',
+      component: origin, // 重定向
+      redirect: '/'
     }
   ]
 })
