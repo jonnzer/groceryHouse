@@ -9,6 +9,8 @@ import comic_route from './server/routes/comic_route'
 // import koaBodyparser from 'koa-bodyparser'
 
 const app = new Koa();
+const path = require('path')          // nodejs自带
+const serve = require('koa-static')   // 引入静态资源服务器
 const router = koaRouter()
 let port = process.env.PORT
 
@@ -25,6 +27,8 @@ app.use(async function (ctx, next) {
 app.on('error', function (err, ctx) {
   console.log('server error', err)
 })
+
+app.use(serve(path.resolve('dist')))      // 将webpack打包好的项目目录作为Koa静态文件服务的目录
 
 router.use('/movie', movie_route.routes()) // 电影api
 router.use('/comic',comic_route.routes())  // 漫画api
