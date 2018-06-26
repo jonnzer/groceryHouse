@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `grocery_comic` (
     `comic_id` INT(11) NOT NULL AUTO_INCREMENT,   -- 漫画id
-    `comic_create_data` npm  NOT NULL,         -- 创造时间
+    `comic_create_data` timestamp  NOT NULL,         -- 创造时间
     `comic_name` CHAR(255) NOT NULL,              -- 漫画名
     `comic_tag` CHAR(255) NOT NULL,               -- 标签
     `comic_pic` CHAR(255) NOT NULL,               -- 图
