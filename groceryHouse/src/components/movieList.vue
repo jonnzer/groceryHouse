@@ -4,7 +4,7 @@
           <swiper :options="swiperOption" ref="mySwiper">
               <swiper-slide class="everySlide">
                 <div class="first_screen">
-                  <div class="timeBox">
+                  <div class="timeBox" v-if="calc_time">
                       <span class="time_day">
                          {{calc_time.time_day}}
                       </span>

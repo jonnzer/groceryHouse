@@ -90,6 +90,7 @@
     font-weight: bold;
     height: 5rem;
     width: 100%;
+    min-width: 981px;
     line-height: 5rem;
     /*border: 0.01rem solid palevioletred;*/
     color: #F2F2F2;
